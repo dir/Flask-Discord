@@ -61,8 +61,11 @@ class DiscordOAuth2Session(_http.DiscordOAuth2HttpClient):
         to go through discord authorization token grant flow again.
 
         """
-        for session_key in self.SESSION_KEYS:
-            session.pop(session_key)
+        try:
+            for session_key in self.SESSION_KEYS:
+                session.pop(session_key)
+        except:
+            session.clear()
 
     @property
     def authorized(self):
