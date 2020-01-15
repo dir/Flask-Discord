@@ -3,6 +3,9 @@
 
 Discord OAuth2 extension for Flask.
 
+### dir Fork
+The purpose of this fork is to fix an issue with the logout feature on a local/development session.
+
 
 ### Installation
 To install current latest release you can use following command:
